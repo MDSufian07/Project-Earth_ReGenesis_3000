@@ -6,42 +6,67 @@ public class GunFire : MonoBehaviour
     [SerializeField] private GameObject regenericEffect;
     [SerializeField] private GameObject muzzleEffect;
 
-    private bool holdTaskRunning = false;
+    private bool leftTaskRunning = false;
+    private bool rightTaskRunning = false;
 
     private void Start()
     {
         regenericEffect.SetActive(false);
+        muzzleEffect.SetActive(false);
     }
 
     private void Update()
     {
-        // Left Click
-        if (Input.GetMouseButtonDown(0))
+        // Left Mouse
+        if (Input.GetMouseButtonDown(0) && !leftTaskRunning)
         {
-            muzzleEffect.SetActive(true);
-
-            // যদি Particle System হয় তাহলে Play() ব্যবহার করুন
-            // muzzleEffect.GetComponent<ParticleSystem>()?.Play();
+            HandleLeftClick().Forget();
         }
 
-        // Right Click
-        if (Input.GetMouseButtonDown(1) && !holdTaskRunning)
+        // Right Mouse
+        if (Input.GetMouseButtonDown(1) && !rightTaskRunning)
         {
             HandleRightClick().Forget();
         }
     }
 
+    private async UniTaskVoid HandleLeftClick()
+    {
+        leftTaskRunning = true;
+
+        // Wait 0.5 sec
+        await UniTask.Delay(500);
+
+        // Released before 0.5 sec
+        if (!Input.GetMouseButton(0))
+        {
+            leftTaskRunning = false;
+            return;
+        }
+
+        // Enable effect
+        muzzleEffect.SetActive(true);
+
+        // Wait until released
+        await UniTask.WaitUntil(() => !Input.GetMouseButton(0));
+
+        // Disable immediately
+        muzzleEffect.SetActive(false);
+
+        leftTaskRunning = false;
+    }
+
     private async UniTaskVoid HandleRightClick()
     {
-        holdTaskRunning = true;
+        rightTaskRunning = true;
 
-        // Wait 0.5 second
+        // Wait 0.5 sec
         await UniTask.Delay(500);
 
         // Released before 0.5 sec
         if (!Input.GetMouseButton(1))
         {
-            holdTaskRunning = false;
+            rightTaskRunning = false;
             return;
         }
 
@@ -54,6 +79,6 @@ public class GunFire : MonoBehaviour
         // Disable immediately
         regenericEffect.SetActive(false);
 
-        holdTaskRunning = false;
+        rightTaskRunning = false;
     }
 }
