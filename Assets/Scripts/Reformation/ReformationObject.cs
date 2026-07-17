@@ -4,8 +4,26 @@ namespace Reformation
 {
     public class ReformationObject : MonoBehaviour
     {
+        public enum RepairMode
+        {
+            PartByPart,
+            SwapObject
+        }
+
+        [Header("Mode")]
+        [SerializeField] private RepairMode repairMode = RepairMode.PartByPart;
+
+        [Header("Part By Part")]
         [SerializeField] private GameObject[] repairParts;
+
+        [Header("Swap Object")]
+        [SerializeField] private GameObject brokenObject;
+        [SerializeField] private GameObject repairedObject;
+
+        [Header("Settings")]
         [SerializeField] private float repairTimePerPart = 0.3f;
+
+        [Header("Complete Effect")]
         [SerializeField] private GameObject completeEffect;
         [SerializeField] private Transform effectPoint;
 
@@ -15,8 +33,22 @@ namespace Reformation
 
         private void Start()
         {
-            foreach (var part in repairParts)
-                part.SetActive(false);
+            if (repairMode == RepairMode.PartByPart)
+            {
+                foreach (var part in repairParts)
+                {
+                    if (part != null)
+                        part.SetActive(false);
+                }
+            }
+            else
+            {
+                if (brokenObject != null)
+                    brokenObject.SetActive(true);
+
+                if (repairedObject != null)
+                    repairedObject.SetActive(false);
+            }
         }
 
         public void Repair(float deltaTime)
@@ -26,20 +58,58 @@ namespace Reformation
 
             timer += deltaTime;
 
-            if (timer >= repairTimePerPart)
+            if (timer < repairTimePerPart)
+                return;
+
+            timer = 0f;
+
+            switch (repairMode)
             {
-                timer = 0;
+                case RepairMode.PartByPart:
+                    RepairNextPart();
+                    break;
 
-                repairParts[currentPart].SetActive(true);
-                currentPart++;
+                case RepairMode.SwapObject:
+                    CompleteSwap();
+                    break;
+            }
+        }
 
-                if (currentPart >= repairParts.Length)
-                {
-                    repaired = true;
+        private void RepairNextPart()
+        {
+            if (currentPart >= repairParts.Length)
+                return;
 
-                    if (completeEffect != null)
-                        Instantiate(completeEffect, effectPoint.position, Quaternion.identity);
-                }
+            repairParts[currentPart].SetActive(true);
+            currentPart++;
+
+            if (currentPart >= repairParts.Length)
+            {
+                FinishRepair();
+            }
+        }
+
+        private void CompleteSwap()
+        {
+            if (brokenObject != null)
+                brokenObject.SetActive(false);
+
+            if (repairedObject != null)
+                repairedObject.SetActive(true);
+
+            FinishRepair();
+        }
+
+        private void FinishRepair()
+        {
+            repaired = true;
+
+            if (completeEffect != null)
+            {
+                Instantiate(
+                    completeEffect,
+                    effectPoint != null ? effectPoint.position : transform.position,
+                    Quaternion.identity);
             }
         }
     }

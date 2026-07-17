@@ -4,6 +4,7 @@ namespace New_Folder
 {
     public class MouseMoveAndRotate : MonoBehaviour
     {
+        
         [Header("Movement")]
         public float moveSpeed = 3f;
         public float moveLimit = 3f;      // ±3 units
