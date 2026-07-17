@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8688480294690341944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandPinky4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4327651194224675554}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2191314968370116228}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5683946330402619895}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5242598152390058251}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandThumb4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3314828208078211421}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2446729041196794595}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6072224135193658292}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6696376195824475164}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2453707437461080424}
   - component: {fileID: 5724569957593737325}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:VBOT_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1630326959967501560}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -489,7 +489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4400987544615050615}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,7 +521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7323518587518306230}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -553,7 +553,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1570249091866547436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandPinky4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,7 +585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 528198727208134006}
   - component: {fileID: 1964693750416918098}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:VBOT_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -747,7 +747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1446467098601700684}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -781,7 +781,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7218266243949357019}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:HeadTop_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -812,7 +812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1018008198380029350}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -844,7 +844,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2387266141039161436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -876,7 +876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3479364936679059888}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightHandTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -891,8 +891,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087198088930817133}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.47027972, y: -0.49646652, z: -0.49835548, w: 0.53291625}
-  m_LocalPosition: {x: 0.068, y: 1.323, z: 0.888}
+  m_LocalRotation: {x: 0.47027975, y: -0.49646655, z: -0.4983555, w: 0.5329163}
+  m_LocalPosition: {x: 0.06800079, y: 1.323, z: 0.8880005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -907,7 +907,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3852332567645347301}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -939,7 +939,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3700551637076554614}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -972,7 +972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3947939394621504017}
   - component: {fileID: 9130604286626329366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mesh_LOD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1038,7 +1038,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3823482970308675840}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1070,7 +1070,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5632699102677175190}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1102,7 +1102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6843579032166329133}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1134,7 +1134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9183181371186602688}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1166,7 +1166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6800087073091261061}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1198,7 +1198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 457169868452495010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1230,7 +1230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1270756200195288094}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1262,7 +1262,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5071610478039966063}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1293,7 +1293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5488819649836001521}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1325,7 +1325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6678368419963138086}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandRing4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1356,7 +1356,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7445261502183625671}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1388,7 +1388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7051496986072655138}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1420,7 +1420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4348422282654778547}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1452,7 +1452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3446809410085826317}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1484,7 +1484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4496919265987172144}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1516,7 +1516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 383090501623977083}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1548,7 +1548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 198837682387056588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandIndex4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1587,7 +1587,7 @@ GameObject:
   - component: {fileID: 7571323057457177842}
   - component: {fileID: 7139859897911223450}
   - component: {fileID: 6022085957869045355}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1814,7 +1814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8717552020257346402}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandPinky4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1846,7 +1846,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2575615512035549474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1878,7 +1878,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1065910834409833582}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandThumb4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1909,7 +1909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8674821842133960634}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1941,7 +1941,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2302278865176027331}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1973,7 +1973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5015809845547867522}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2005,7 +2005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5692079574198840518}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2037,7 +2037,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7578141309005172797}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2069,7 +2069,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1756873210337439834}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandRing4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2100,7 +2100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5292581786527180561}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2137,7 +2137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3760142940960686038}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2169,7 +2169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 786925089061674158}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2201,7 +2201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4396894929401310152}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2233,7 +2233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6476295167962332451}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2265,7 +2265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7302406715484726205}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2297,7 +2297,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829720576020444098}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandMiddle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2328,7 +2328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6721387441137127644}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2361,7 +2361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1470285626737881460}
   - component: {fileID: 8580918971432932040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:VBOT_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2523,7 +2523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5610392666553814664}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2557,7 +2557,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5868474607669723812}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2589,7 +2589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3870101831763408622}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2621,7 +2621,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6942807609182988866}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2653,7 +2653,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4031331521700697701}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2685,7 +2685,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7181565210178215623}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2717,7 +2717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2383203803663556290}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2749,7 +2749,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6727257630688631137}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2781,7 +2781,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8726038551744528516}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2813,7 +2813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5746893669948193306}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2845,7 +2845,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5617591283472381174}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2877,7 +2877,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7271807363625511435}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:HeadTop_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2909,7 +2909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5523181245108136359}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2941,7 +2941,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3414329637179816074}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2973,7 +2973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7722045106890789709}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3006,7 +3006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1540155140758632078}
   - component: {fileID: 1285944331491387834}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:VBOT_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3168,7 +3168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2682479560849492984}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3204,7 +3204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7696499173678255661}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandIndex4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3235,7 +3235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6577130803079437271}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3269,7 +3269,7 @@ GameObject:
   - component: {fileID: 8047690484295332891}
   - component: {fileID: 4877144329333786912}
   - component: {fileID: 8243574720380021747}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rig 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3339,7 +3339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7338791826826936471}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandPinky4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3371,7 +3371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5146183395080446237}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3403,7 +3403,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5688079408200897680}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3435,7 +3435,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8823897556150880084}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3467,7 +3467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4229474657462021466}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3499,7 +3499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2017554151155348367}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3531,7 +3531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 521141332361275052}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:RightHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3563,7 +3563,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8505553110000780622}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VBOT_:LeftHandMiddle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3585,6 +3585,105 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5617591283472381174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3708432806864523181
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 9006706122299166819}
+    m_Modifications:
+    - target: {fileID: 316176240051126980, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825159644492437490, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680780432206257777, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011486876678575405, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_Name
+      value: RegenericEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011486876678575405, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048519870196254216, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460698625324806208, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460698625324806208, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460698625324806208, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460698625324806208, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460698625324806208, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.8800176
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460698625324806208, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.3380082
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460698625324806208, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.000000029802319
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460698625324806208, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460698625324806208, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000029802319
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460698625324806208, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000004470348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460698625324806208, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460698625324806208, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460698625324806208, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+--- !u!1 &6925384538105961088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6011486876678575405, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+  m_PrefabInstance: {fileID: 3708432806864523181}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7701151884916457453 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6460698625324806208, guid: a78c8cabd4b432a4b92608ea3a2ce728, type: 3}
+  m_PrefabInstance: {fileID: 3708432806864523181}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7666140322647854952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3593,6 +3692,70 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5292581786527180561}
     m_Modifications:
+    - target: {fileID: 26209672617246450, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 36993098597997129, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 193836677302835922, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 198521437731153139, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 354861597607112155, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 509771078016127488, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 511693059130357070, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 766046366022017691, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 789796210649635533, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 882798048614357309, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022084305991247040, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079251731390367989, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221611190110616094, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264044403623223393, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273703731212871145, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507033268499083167, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1629640601001729803, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -3645,13 +3808,185 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 690.412
       objectReference: {fileID: 0}
+    - target: {fileID: 1737955161667255247, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781136757952081073, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988750598438664240, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103476735262645686, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2150035419418543537, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
       propertyPath: m_Name
       value: laser rifle
       objectReference: {fileID: 0}
+    - target: {fileID: 2150035419418543537, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234879013939797971, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455649046220742992, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2467867803851712029, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2608498447916645252, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: regenericEffect
+      value: 
+      objectReference: {fileID: 6925384538105961088}
+    - target: {fileID: 2857594048190094155, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066376937491713836, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129066682569726685, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222644787864254154, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241983763941073957, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3367634306688097667, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3367634306688097671, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3367634306688097675, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686130366125095039, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762135358213171395, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3910002025993756346, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485708020877261192, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4646810085938368416, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722316470701129940, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934951023299713049, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5366546911907861948, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368509619876261662, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569325349030250947, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611228770430158751, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5675288480982490790, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861136033250711330, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149331871850020802, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352868686422997513, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988324651589982886, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7268640477195764243, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323689710029838529, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502570556638775105, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542110663167307450, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601594717702745263, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643167551435496628, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703984334515837410, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703984334515837414, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703984334515837422, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3607599681240191746, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1629640601001729803, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7701151884916457453}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2805ee47bd3a0544a92207b09558b3ba, type: 3}
 --- !u!4 &9006706122299166819 stripped
