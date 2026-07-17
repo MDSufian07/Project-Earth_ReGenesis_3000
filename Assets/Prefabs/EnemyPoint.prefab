@@ -211,6 +211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower8 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 2fb067862b7d7a047a26854dabac3b44, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2fb067862b7d7a047a26854dabac3b44, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -312,13 +316,34 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400002, guid: 2fb067862b7d7a047a26854dabac3b44, type: 3}
       insertIndex: -1
       addedObject: {fileID: 44558832495248945}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 2fb067862b7d7a047a26854dabac3b44, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7299922204733641726}
   m_SourcePrefab: {fileID: 100100000, guid: 2fb067862b7d7a047a26854dabac3b44, type: 3}
 --- !u!1 &4605851763548393970 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 2fb067862b7d7a047a26854dabac3b44, type: 3}
   m_PrefabInstance: {fileID: 4605851763548428112}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7299922204733641726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4605851763548393970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5948d5b069ebee541ae72cef20c15500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy.EnemySpawner
+  enemyPrefab: {fileID: 5055327113244601019, guid: a67dbda131f3edd4d89169c99b0aa0d6, type: 3}
+  spawnPoint: {fileID: 7911414423185769106}
+  spawnEffect: {fileID: 100008, guid: e16ef38aa341c8b4d908e6589cde39b6, type: 3}
+  effectDuration: 1.5
+  totalEnemies: 10
+  spawnInterval: 3
 --- !u!4 &4605851763548818898 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 2fb067862b7d7a047a26854dabac3b44, type: 3}

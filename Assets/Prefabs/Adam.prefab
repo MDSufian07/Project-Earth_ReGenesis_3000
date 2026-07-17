@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy.EnemyAI
   player: {fileID: 0}
-  moveSpeed: 2
+  moveSpeed: 3
   rotateSpeed: 5
   stopDistance: 1
   damage: 10
