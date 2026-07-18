@@ -18,6 +18,8 @@ namespace Enemy
         [SerializeField] private float damage = 10f;
         [SerializeField] private float attackCooldown = 1.5f;
         [SerializeField] private float hitDelay = 0.4f;
+        
+        [SerializeField] private AudioSource deathSound;
 
         private Animator animator;
 
@@ -118,6 +120,8 @@ namespace Enemy
                 return;
 
             isDead = true;
+
+            deathSound.Play();
 
             StopAllCoroutines();
             enabled = false;
