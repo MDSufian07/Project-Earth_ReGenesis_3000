@@ -17,13 +17,26 @@ public class GunFire : MonoBehaviour
     [SerializeField] private float repairRadius = 1.5f;
     [SerializeField] private LayerMask repairLayer;
 
+    [Header("Optimization")]
+    [SerializeField] private int maxHits = 20;
+
+    private RaycastHit[] hitBuffer;
+
     private bool leftTaskRunning;
     private bool rightTaskRunning;
 
+    private void Awake()
+    {
+        hitBuffer = new RaycastHit[maxHits];
+    }
+
     private void Start()
     {
-        regenericEffect.SetActive(false);
-        muzzleEffect.SetActive(false);
+        if (regenericEffect != null)
+            regenericEffect.SetActive(false);
+
+        if (muzzleEffect != null)
+            muzzleEffect.SetActive(false);
 
         if (reformationAudioSource != null)
             reformationAudioSource.Stop();
@@ -31,16 +44,22 @@ public class GunFire : MonoBehaviour
 
     private void Update()
     {
+        if (InputManager.Instance == null)
+            return;
+
+        // Left Mouse
         if (InputManager.Instance.FirePressed && !leftTaskRunning)
         {
             HandleLeftClick().Forget();
         }
 
+        // Right Mouse
         if (InputManager.Instance.RepairPressed && !rightTaskRunning)
         {
             HandleRightClick().Forget();
         }
 
+        // Repair
         if (InputManager.Instance.RepairHeld)
         {
             RepairObjects();
@@ -59,11 +78,13 @@ public class GunFire : MonoBehaviour
             return;
         }
 
-        muzzleEffect.SetActive(true);
+        if (muzzleEffect != null)
+            muzzleEffect.SetActive(true);
 
         await UniTask.WaitUntil(() => !InputManager.Instance.FireHeld);
 
-        muzzleEffect.SetActive(false);
+        if (muzzleEffect != null)
+            muzzleEffect.SetActive(false);
 
         leftTaskRunning = false;
     }
@@ -80,7 +101,8 @@ public class GunFire : MonoBehaviour
             return;
         }
 
-        regenericEffect.SetActive(true);
+        if (regenericEffect != null)
+            regenericEffect.SetActive(true);
 
         if (reformationAudioSource != null &&
             !reformationAudioSource.isPlaying)
@@ -90,7 +112,8 @@ public class GunFire : MonoBehaviour
 
         await UniTask.WaitUntil(() => !InputManager.Instance.RepairHeld);
 
-        regenericEffect.SetActive(false);
+        if (regenericEffect != null)
+            regenericEffect.SetActive(false);
 
         if (reformationAudioSource != null &&
             reformationAudioSource.isPlaying)
@@ -103,16 +126,24 @@ public class GunFire : MonoBehaviour
 
     private void RepairObjects()
     {
-        RaycastHit[] hits = Physics.SphereCastAll(
+        if (firePoint == null)
+            return;
+
+        int hitCount = Physics.SphereCastNonAlloc(
             firePoint.position,
             repairRadius,
             firePoint.forward,
+            hitBuffer,
             repairRange,
             repairLayer);
 
-        foreach (RaycastHit hit in hits)
+        for (int i = 0; i < hitCount; i++)
         {
-            ReformationObject obj = hit.collider.GetComponent<ReformationObject>();
+            if (hitBuffer[i].collider == null)
+                continue;
+
+            ReformationObject obj =
+                hitBuffer[i].collider.GetComponent<ReformationObject>();
 
             if (obj != null)
             {
