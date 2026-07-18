@@ -3,40 +3,47 @@ using UnityEngine.Animations.Rigging;
 
 public class AimController : MonoBehaviour
 {
-    public Rig aimRig;
-    public float speed = 8f;
+    [SerializeField] private Rig aimRig;
+    [SerializeField] private float speed = 8f;
 
-    private bool _cursorLocked = false;
+    private bool cursorLocked;
 
-    void Update()
+    private void Update()
     {
-        // Lock & Hide cursor on first left/right click
-        if (!_cursorLocked && (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)))
+        if (!cursorLocked &&
+            (InputManager.Instance.FirePressed ||
+             InputManager.Instance.RepairPressed))
         {
             LockCursor();
         }
 
-        // Unlock & Show cursor on ESC
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             UnlockCursor();
         }
 
-        // Aim Rig
-        float targetWeight = (Input.GetMouseButton(0) || Input.GetMouseButton(1)) ? 1f : 0f;
-        aimRig.weight = Mathf.Lerp(aimRig.weight, targetWeight, Time.deltaTime * speed);
+        bool aiming =
+            InputManager.Instance.FireHeld ||
+            InputManager.Instance.RepairHeld;
+
+        float targetWeight = aiming ? 1f : 0f;
+
+        aimRig.weight = Mathf.Lerp(
+            aimRig.weight,
+            targetWeight,
+            Time.deltaTime * speed);
     }
 
-    void LockCursor()
+    private void LockCursor()
     {
-        _cursorLocked = true;
+        cursorLocked = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    void UnlockCursor()
+    private void UnlockCursor()
     {
-        _cursorLocked = false;
+        cursorLocked = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }

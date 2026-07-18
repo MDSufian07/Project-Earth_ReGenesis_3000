@@ -9,7 +9,7 @@ public class GunFire : MonoBehaviour
     [SerializeField] private GameObject muzzleEffect;
 
     [Header("Audio")]
-    [SerializeField] private AudioSource reformationAudioSource; // Loop = ON
+    [SerializeField] private AudioSource reformationAudioSource;
 
     [Header("Reformation")]
     [SerializeField] private Transform firePoint;
@@ -17,8 +17,8 @@ public class GunFire : MonoBehaviour
     [SerializeField] private float repairRadius = 1.5f;
     [SerializeField] private LayerMask repairLayer;
 
-    private bool leftTaskRunning = false;
-    private bool rightTaskRunning = false;
+    private bool leftTaskRunning;
+    private bool rightTaskRunning;
 
     private void Start()
     {
@@ -26,27 +26,22 @@ public class GunFire : MonoBehaviour
         muzzleEffect.SetActive(false);
 
         if (reformationAudioSource != null)
-        {
             reformationAudioSource.Stop();
-        }
     }
 
     private void Update()
     {
-        // Left Mouse
-        if (Input.GetMouseButtonDown(0) && !leftTaskRunning)
+        if (InputManager.Instance.FirePressed && !leftTaskRunning)
         {
             HandleLeftClick().Forget();
         }
 
-        // Right Mouse
-        if (Input.GetMouseButtonDown(1) && !rightTaskRunning)
+        if (InputManager.Instance.RepairPressed && !rightTaskRunning)
         {
             HandleRightClick().Forget();
         }
 
-        // Repair while holding right mouse
-        if (Input.GetMouseButton(1))
+        if (InputManager.Instance.RepairHeld)
         {
             RepairObjects();
         }
@@ -58,7 +53,7 @@ public class GunFire : MonoBehaviour
 
         await UniTask.Delay(500);
 
-        if (!Input.GetMouseButton(0))
+        if (!InputManager.Instance.FireHeld)
         {
             leftTaskRunning = false;
             return;
@@ -66,7 +61,7 @@ public class GunFire : MonoBehaviour
 
         muzzleEffect.SetActive(true);
 
-        await UniTask.WaitUntil(() => !Input.GetMouseButton(0));
+        await UniTask.WaitUntil(() => !InputManager.Instance.FireHeld);
 
         muzzleEffect.SetActive(false);
 
@@ -77,32 +72,28 @@ public class GunFire : MonoBehaviour
     {
         rightTaskRunning = true;
 
-        // Charge Time
         await UniTask.Delay(500);
 
-        if (!Input.GetMouseButton(1))
+        if (!InputManager.Instance.RepairHeld)
         {
             rightTaskRunning = false;
             return;
         }
 
-        // Enable Effect
         regenericEffect.SetActive(true);
 
-        // Start Loop Sound
-        if (reformationAudioSource != null && !reformationAudioSource.isPlaying)
+        if (reformationAudioSource != null &&
+            !reformationAudioSource.isPlaying)
         {
             reformationAudioSource.Play();
         }
 
-        // Wait until mouse released
-        await UniTask.WaitUntil(() => !Input.GetMouseButton(1));
+        await UniTask.WaitUntil(() => !InputManager.Instance.RepairHeld);
 
-        // Disable Effect
         regenericEffect.SetActive(false);
 
-        // Stop Sound
-        if (reformationAudioSource != null && reformationAudioSource.isPlaying)
+        if (reformationAudioSource != null &&
+            reformationAudioSource.isPlaying)
         {
             reformationAudioSource.Stop();
         }

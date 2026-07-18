@@ -19,33 +19,33 @@ namespace Sound
         private void Update()
         {
             bool moving =
-                Input.GetKey(KeyCode.W) ||
-                Input.GetKey(KeyCode.A) ||
-                Input.GetKey(KeyCode.S) ||
-                Input.GetKey(KeyCode.D);
+                InputManager.Instance.MoveInput.sqrMagnitude > 0.01f;
 
             bool sprinting =
-                (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && moving;
+                InputManager.Instance.SprintHeld && moving;
 
-            // Jump
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (InputManager.Instance.JumpPressed)
             {
                 if (jumpSource != null)
                     jumpSource.Play();
 
-                // Disable footsteps for 2 seconds
-                footstepResumeTime = Time.time + jumpFootstepDisableTime;
+                footstepResumeTime =
+                    Time.time + jumpFootstepDisableTime;
 
-                if (footstepSource != null && footstepSource.isPlaying)
+                if (footstepSource != null &&
+                    footstepSource.isPlaying)
+                {
                     footstepSource.Stop();
+                }
             }
 
-            // Footstep
-            if (moving && Time.time >= footstepResumeTime)
+            if (moving &&
+                Time.time >= footstepResumeTime)
             {
                 if (footstepSource != null)
                 {
-                    footstepSource.pitch = sprinting ? sprintPitch : walkPitch;
+                    footstepSource.pitch =
+                        sprinting ? sprintPitch : walkPitch;
 
                     if (!footstepSource.isPlaying)
                         footstepSource.Play();
@@ -53,8 +53,11 @@ namespace Sound
             }
             else
             {
-                if (footstepSource != null && footstepSource.isPlaying)
+                if (footstepSource != null &&
+                    footstepSource.isPlaying)
+                {
                     footstepSource.Stop();
+                }
             }
         }
     }

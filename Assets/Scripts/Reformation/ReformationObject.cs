@@ -27,6 +27,8 @@ namespace Reformation
         [SerializeField] private GameObject completeEffect;
         [SerializeField] private Transform effectPoint;
 
+        [SerializeField] private AudioSource healSound;
+
         private float timer;
         private int currentPart;
         private bool repaired;
@@ -106,6 +108,7 @@ namespace Reformation
 
             if (completeEffect != null)
             {
+                healSound.Play();
                 Instantiate(
                     completeEffect,
                     effectPoint != null ? effectPoint.position : transform.position,

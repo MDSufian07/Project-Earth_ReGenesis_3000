@@ -15,8 +15,8 @@ public class ChargeGun : MonoBehaviour
     [SerializeField] private float maximumDamage = 100f;
 
     [Header("Audio")]
-    [SerializeField] private AudioSource chargeAudioSource; // Loop = ON
-    [SerializeField] private AudioSource fireAudioSource;   // Loop = OFF
+    [SerializeField] private AudioSource chargeAudioSource;
+    [SerializeField] private AudioSource fireAudioSource;
     [SerializeField] private AudioClip fireSfx;
 
     private float chargeStartTime;
@@ -25,29 +25,27 @@ public class ChargeGun : MonoBehaviour
     private void Start()
     {
         if (chargeAudioSource != null)
-        {
             chargeAudioSource.Stop();
-        }
     }
 
     private void Update()
     {
-        // Start Charging
-        if (Input.GetMouseButtonDown(0))
+        if (InputManager.Instance.FirePressed)
         {
             charging = true;
             chargeStartTime = Time.time;
 
-            if (chargeAudioSource != null && !chargeAudioSource.isPlaying)
+            if (chargeAudioSource != null &&
+                !chargeAudioSource.isPlaying)
             {
                 chargeAudioSource.Play();
             }
         }
 
-        // Release Fire
-        if (Input.GetMouseButtonUp(0))
+        if (InputManager.Instance.FireReleased)
         {
-            if (chargeAudioSource != null && chargeAudioSource.isPlaying)
+            if (chargeAudioSource != null &&
+                chargeAudioSource.isPlaying)
             {
                 chargeAudioSource.Stop();
             }
@@ -65,7 +63,6 @@ public class ChargeGun : MonoBehaviour
 
         float holdTime = Time.time - chargeStartTime;
 
-        // Not enough charge
         if (holdTime < minimumCharge)
             return;
 
@@ -81,7 +78,6 @@ public class ChargeGun : MonoBehaviour
             maximumDamage,
             t);
 
-        // Spawn Bullet
         Bullet bullet = Instantiate(
             bulletPrefab,
             firePoint.position,
@@ -89,7 +85,6 @@ public class ChargeGun : MonoBehaviour
 
         bullet.Initialize(damage);
 
-        // Fire Sound
         if (fireAudioSource != null && fireSfx != null)
         {
             fireAudioSource.PlayOneShot(fireSfx);
