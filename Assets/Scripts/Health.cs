@@ -5,27 +5,50 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 100f;
 
+    [Header("UI")]
+    [SerializeField] private HealthBar healthBar;
+
     public float currentHealth;
+
     private EnemyAI enemyAI;
+    private EnemySpawner spawner;
 
     private void Awake()
     {
         currentHealth = maxHealth;
         enemyAI = GetComponent<EnemyAI>();
+
+        if (healthBar != null)
+            healthBar.SetHealth(currentHealth, maxHealth);
+    }
+
+    // Called by EnemySpawner
+    public void SetSpawner(EnemySpawner enemySpawner)
+    {
+        spawner = enemySpawner;
     }
 
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
 
         Debug.Log($"{gameObject.name} HP : {currentHealth}");
 
-        // Enemy হলে Damage Animation
+        // Update Health Bar (Player)
+        if (healthBar != null)
+            healthBar.SetHealth(currentHealth, maxHealth);
+
+        // Enemy Damage Animation
         if (enemyAI != null)
             enemyAI.PlayDamageAnimation();
 
         if (currentHealth <= 0)
         {
+            // Notify Spawner that this enemy died
+            if (spawner != null)
+                spawner.EnemyKilled();
+
             if (enemyAI != null)
             {
                 enemyAI.Die();
@@ -35,5 +58,14 @@ public class Health : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+
+    public void Heal(float amount)
+    {
+        currentHealth += amount;
+        currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
+
+        if (healthBar != null)
+            healthBar.SetHealth(currentHealth, maxHealth);
     }
 }
