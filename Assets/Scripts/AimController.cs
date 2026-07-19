@@ -6,21 +6,30 @@ public class AimController : MonoBehaviour
     [SerializeField] private Rig aimRig;
     [SerializeField] private float speed = 8f;
 
-    private bool cursorLocked;
+    [Header("UI Panels")]
+    [SerializeField] private GameObject[] uiPanels;
+
+    private void Start()
+    {
+        UpdateCursorState();
+    }
 
     private void Update()
     {
-        if (!cursorLocked &&
-            (InputManager.Instance.FirePressed ||
-             InputManager.Instance.RepairPressed))
-        {
-            LockCursor();
-        }
-
+        // ESC শুধু Pause Panel Toggle করবে (যদি প্রথম element Pause Panel হয়)
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            UnlockCursor();
+            if (uiPanels.Length > 0 && uiPanels[0] != null)
+            {
+                uiPanels[0].SetActive(!uiPanels[0].activeSelf);
+            }
         }
+
+        UpdateCursorState();
+
+        // কোনো UI Open থাকলে Aim Update করবে না
+        if (IsAnyPanelOpen())
+            return;
 
         bool aiming =
             InputManager.Instance.FireHeld ||
@@ -34,17 +43,28 @@ public class AimController : MonoBehaviour
             Time.deltaTime * speed);
     }
 
-    private void LockCursor()
+    private bool IsAnyPanelOpen()
     {
-        cursorLocked = true;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        foreach (GameObject panel in uiPanels)
+        {
+            if (panel != null && panel.activeInHierarchy)
+                return true;
+        }
+
+        return false;
     }
 
-    private void UnlockCursor()
+    private void UpdateCursorState()
     {
-        cursorLocked = false;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        if (IsAnyPanelOpen())
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 }

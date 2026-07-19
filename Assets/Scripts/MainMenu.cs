@@ -1,8 +1,6 @@
-using System;
-using JetBrains.Annotations;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -18,6 +16,11 @@ public class MainMenu : MonoBehaviour
     public void LoadMission3()
     {
         SceneManager.LoadScene("Mission3");
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     
