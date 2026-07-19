@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3421869084067269130}
   - component: {fileID: 306801823470365847}
   - component: {fileID: 4615640780616578564}
-  m_Layer: 0
+  - component: {fileID: 3449998916238596730}
+  m_Layer: 13
   m_Name: Aqua Genesis Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,6 +114,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3449998916238596730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6745443861524334688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8e39f90a2329418961f2119856ffd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectableItem
+  pressEUI: {fileID: 0}
+  missionCompletePanel: {fileID: 0}
+  playerInRange: 0
 --- !u!1001 &8316246307361950557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -121,9 +137,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 173995580888153938}
     m_Modifications:
+    - target: {fileID: 241909682899964031, guid: 491bd2f8e55e1db45a195465b18740bd, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 683182934616091483, guid: 491bd2f8e55e1db45a195465b18740bd, type: 3}
       propertyPath: m_Name
       value: Crystal effect blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 683182934616091483, guid: 491bd2f8e55e1db45a195465b18740bd, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6148872651101487413, guid: 491bd2f8e55e1db45a195465b18740bd, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7150971544766200243, guid: 491bd2f8e55e1db45a195465b18740bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -164,6 +192,10 @@ PrefabInstance:
     - target: {fileID: 7150971544766200243, guid: 491bd2f8e55e1db45a195465b18740bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931125870882077945, guid: 491bd2f8e55e1db45a195465b18740bd, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3780769435728677772}
   - component: {fileID: 1375711721227656895}
   - component: {fileID: 148552319329548074}
-  m_Layer: 0
+  - component: {fileID: 204981685381635598}
+  m_Layer: 13
   m_Name: Pyro Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,6 +114,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &204981685381635598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7866170168213938701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8e39f90a2329418961f2119856ffd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectableItem
+  pressEUI: {fileID: 0}
+  missionCompletePanel: {fileID: 0}
+  playerInRange: 0
 --- !u!1001 &2046266041254296285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -121,9 +137,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1073232415299874374}
     m_Modifications:
+    - target: {fileID: 2400624486851108701, guid: 00bba72dbda252a4eac12e218848cb44, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588233080518614372, guid: 00bba72dbda252a4eac12e218848cb44, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859628384114942480, guid: 00bba72dbda252a4eac12e218848cb44, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 3928998189374746443, guid: 00bba72dbda252a4eac12e218848cb44, type: 3}
       propertyPath: m_Name
       value: Crystal effect green
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928998189374746443, guid: 00bba72dbda252a4eac12e218848cb44, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4027744226266032311, guid: 00bba72dbda252a4eac12e218848cb44, type: 3}
       propertyPath: m_LocalPosition.x

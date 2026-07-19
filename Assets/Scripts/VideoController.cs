@@ -1,4 +1,5 @@
 using Invector.vCharacterController;
+using Sound;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.InputSystem;
@@ -8,7 +9,7 @@ public class VideoController : MonoBehaviour
     [Header("References")]
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private GameObject videoCanvas;
-    [SerializeField] private vThirdPersonInput playerInput;
+    [SerializeField] private PlayerMovementAudio playerInput;
 
     private void Start()
     {
