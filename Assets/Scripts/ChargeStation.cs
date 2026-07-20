@@ -6,10 +6,15 @@ public class ChargeStation : MonoBehaviour
     [Header("Recharge")]
     [SerializeField] private float rechargeRate = 1f;
 
-    [Header("UI (Optional)")]
+    [Header("References")]
+    [SerializeField] private Collider rechargeTrigger;
+    [SerializeField] private Collider uiTrigger;
+
+    [Header("UI")]
     [SerializeField] private GameObject pressEUI;
 
-    private bool playerInside;
+    private bool inUIRange;
+    private bool inRechargeRange;
 
     private void Start()
     {
@@ -19,10 +24,10 @@ public class ChargeStation : MonoBehaviour
 
     private void Update()
     {
-        if (!playerInside)
-            return;
+        if (pressEUI != null)
+            pressEUI.SetActive(inUIRange);
 
-        if (Input.GetKey(KeyCode.E))
+        if (inRechargeRange && Input.GetKey(KeyCode.E))
         {
             GunCharge.Instance.Recharge(rechargeRate * Time.deltaTime);
         }
@@ -33,10 +38,14 @@ public class ChargeStation : MonoBehaviour
         if (!other.CompareTag("Player"))
             return;
 
-        playerInside = true;
+        if (other == null)
+            return;
 
-        if (pressEUI != null)
-            pressEUI.SetActive(true);
+        if (other.bounds.Intersects(uiTrigger.bounds))
+            inUIRange = true;
+
+        if (other.bounds.Intersects(rechargeTrigger.bounds))
+            inRechargeRange = true;
     }
 
     private void OnTriggerExit(Collider other)
@@ -44,9 +53,10 @@ public class ChargeStation : MonoBehaviour
         if (!other.CompareTag("Player"))
             return;
 
-        playerInside = false;
+        if (other.bounds.Intersects(uiTrigger.bounds))
+            inUIRange = false;
 
-        if (pressEUI != null)
-            pressEUI.SetActive(false);
+        if (other.bounds.Intersects(rechargeTrigger.bounds))
+            inRechargeRange = false;
     }
 }
