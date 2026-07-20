@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy.EnemyAI
   player: {fileID: 0}
-  moveSpeed: 3
+  moveSpeed: 4.5
   rotateSpeed: 5
   stopDistance: 1
   damage: 10
@@ -347,6 +347,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 100
+  healthBar: {fileID: 0}
+  currentHealth: 0
 --- !u!82 &6873178975770772502
 AudioSource:
   m_ObjectHideFlags: 0
