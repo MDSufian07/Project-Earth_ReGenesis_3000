@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class GameOverManager : MonoBehaviour
 {
@@ -9,14 +10,12 @@ public class GameOverManager : MonoBehaviour
     {
         if(playerHealth.currentHealth <= 0)
         {
-            Gameover();
+           Invoke(nameof(Gameover), .3f);
         }
     }
 
     private void Gameover()
     {
         gameOverUI.SetActive(true);
-        Time.timeScale = 0;
-        
     }
 }

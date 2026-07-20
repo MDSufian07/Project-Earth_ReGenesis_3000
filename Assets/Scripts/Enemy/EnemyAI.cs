@@ -6,6 +6,8 @@ namespace Enemy
     [RequireComponent(typeof(Animator))]
     public class EnemyAI : MonoBehaviour
     {
+        private static readonly int Walk = Animator.StringToHash("Walk");
+
         [Header("Target")]
         [SerializeField] private Transform player;
 
@@ -70,11 +72,11 @@ namespace Enemy
             if (distance > stopDistance)
             {
                 transform.position += direction.normalized * moveSpeed * Time.deltaTime;
-                animator.SetBool("Walk", true);
+               animator.SetBool(Walk, true);
             }
             else
             {
-                animator.SetBool("Walk", false);
+                animator.SetBool(Walk, false);
 
                 if (canAttack)
                     StartCoroutine(AttackRoutine());
@@ -124,7 +126,7 @@ namespace Enemy
             StopAllCoroutines();
             enabled = false;
 
-            animator.SetBool("Walk", false);
+            animator.SetBool(Walk, false);
             animator.ResetTrigger("Attack");
             animator.ResetTrigger("Damage");
 

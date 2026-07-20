@@ -194,15 +194,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: f671e87896ed58c4e972db58101c2d27, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: f671e87896ed58c4e972db58101c2d27, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: f671e87896ed58c4e972db58101c2d27, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: f671e87896ed58c4e972db58101c2d27, type: 3}
       propertyPath: m_LocalPosition.x
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy.EnemyAI
   player: {fileID: 0}
-  moveSpeed: 4.5
+  moveSpeed: 3.7
   rotateSpeed: 5
   stopDistance: 1
   damage: 10
@@ -331,9 +331,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.19
-  m_Height: 1.8436143
+  m_Height: 1.9353962
   m_Direction: 1
-  m_Center: {x: 0, y: 0.89817727, z: 0}
+  m_Center: {x: 0, y: 0.94406825, z: 0}
 --- !u!114 &5219009221900111152
 MonoBehaviour:
   m_ObjectHideFlags: 0
