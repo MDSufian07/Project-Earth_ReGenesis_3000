@@ -10,12 +10,16 @@ public class Health : MonoBehaviour
 
     public float currentHealth;
 
+    // Read-only property
+    public float MaxHealth => maxHealth;
+
     private EnemyAI enemyAI;
     private EnemySpawner spawner;
 
     private void Awake()
     {
         currentHealth = maxHealth;
+
         enemyAI = GetComponent<EnemyAI>();
 
         if (healthBar != null)
@@ -35,7 +39,7 @@ public class Health : MonoBehaviour
 
         Debug.Log($"{gameObject.name} HP : {currentHealth}");
 
-        // Update Health Bar (Player)
+        // Update Health Bar
         if (healthBar != null)
             healthBar.SetHealth(currentHealth, maxHealth);
 
@@ -45,7 +49,7 @@ public class Health : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            // Notify Spawner that this enemy died
+            // Notify Spawner
             if (spawner != null)
                 spawner.EnemyKilled();
 
@@ -67,5 +71,10 @@ public class Health : MonoBehaviour
 
         if (healthBar != null)
             healthBar.SetHealth(currentHealth, maxHealth);
+    }
+
+    public bool IsFullHealth()
+    {
+        return currentHealth >= maxHealth;
     }
 }
