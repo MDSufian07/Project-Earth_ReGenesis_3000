@@ -311,9 +311,9 @@ MonoBehaviour:
   rotateSpeed: 5
   stopDistance: 1
   gravity: -25
-  damage: 10
+  damage: 15
   attackCooldown: 1.5
-  attackRange: 1.5
+  attackRange: 1.7
   deathSound: {fileID: 6873178975770772502}
   hitSound: {fileID: -548597928240416846}
 --- !u!114 &5219009221900111152
@@ -544,7 +544,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 2
-  m_Radius: 0.25
+  m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.8
   m_SkinWidth: 0.0001

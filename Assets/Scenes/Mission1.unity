@@ -13326,7 +13326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7299922204733641726, guid: e32f65f613c067b49b8fe220f634e309, type: 3}
       propertyPath: spawnInterval
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7299922204733641726, guid: e32f65f613c067b49b8fe220f634e309, type: 3}
       propertyPath: objectToEnable
@@ -13422,12 +13422,16 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3659239063696531914, guid: 1137099305ecaa3479d03fad8794ff22, type: 3}
+      propertyPath: maximumDamage
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659239063696531914, guid: 1137099305ecaa3479d03fad8794ff22, type: 3}
       propertyPath: minimumCharge
       value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3659239063696531914, guid: 1137099305ecaa3479d03fad8794ff22, type: 3}
       propertyPath: minimumDamage
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4369991579327325181, guid: 1137099305ecaa3479d03fad8794ff22, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13674,7 +13678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5988047882730869246, guid: 6e40b58ea1561924f9e45605e15f1e21, type: 3}
       propertyPath: healRate
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6272016340627875153, guid: 6e40b58ea1561924f9e45605e15f1e21, type: 3}
       propertyPath: m_Layer
