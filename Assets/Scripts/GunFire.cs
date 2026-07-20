@@ -6,7 +6,6 @@ public class GunFire : MonoBehaviour
 {
     [Header("Effects")]
     [SerializeField] private GameObject regenericEffect;
-    [SerializeField] private GameObject muzzleEffect;
 
     [Header("Audio")]
     [SerializeField] private AudioSource reformationAudioSource;
@@ -21,8 +20,6 @@ public class GunFire : MonoBehaviour
     [SerializeField] private int maxHits = 20;
 
     private RaycastHit[] hitBuffer;
-
-    private bool leftTaskRunning;
     private bool rightTaskRunning;
 
     private void Awake()
@@ -35,9 +32,6 @@ public class GunFire : MonoBehaviour
         if (regenericEffect != null)
             regenericEffect.SetActive(false);
 
-        if (muzzleEffect != null)
-            muzzleEffect.SetActive(false);
-
         if (reformationAudioSource != null)
             reformationAudioSource.Stop();
     }
@@ -47,46 +41,15 @@ public class GunFire : MonoBehaviour
         if (InputManager.Instance == null)
             return;
 
-        // Left Mouse
-        if (InputManager.Instance.FirePressed && !leftTaskRunning)
-        {
-            HandleLeftClick().Forget();
-        }
-
-        // Right Mouse
         if (InputManager.Instance.RepairPressed && !rightTaskRunning)
         {
             HandleRightClick().Forget();
         }
 
-        // Repair
         if (InputManager.Instance.RepairHeld)
         {
             RepairObjects();
         }
-    }
-
-    private async UniTaskVoid HandleLeftClick()
-    {
-        leftTaskRunning = true;
-
-        await UniTask.Delay(500);
-
-        if (!InputManager.Instance.FireHeld)
-        {
-            leftTaskRunning = false;
-            return;
-        }
-
-        if (muzzleEffect != null)
-            muzzleEffect.SetActive(true);
-
-        await UniTask.WaitUntil(() => !InputManager.Instance.FireHeld);
-
-        if (muzzleEffect != null)
-            muzzleEffect.SetActive(false);
-
-        leftTaskRunning = false;
     }
 
     private async UniTaskVoid HandleRightClick()

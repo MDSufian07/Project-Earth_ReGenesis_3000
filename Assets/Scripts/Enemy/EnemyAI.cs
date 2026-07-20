@@ -88,15 +88,13 @@ namespace Enemy
             animator.SetTrigger("Attack");
 
             yield return new WaitForSeconds(hitDelay);
-
-            // Player Health প্রতি বার নতুন করে নেওয়া হচ্ছে
+            
             if (player != null)
             {
                 Health playerHealth = player.GetComponent<Health>();
 
                 if (playerHealth != null)
                 {
-                    Debug.Log("Enemy Hit Player");
                     playerHealth.TakeDamage(damage);
                 }
             }
