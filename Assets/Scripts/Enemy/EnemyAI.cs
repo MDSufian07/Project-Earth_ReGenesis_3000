@@ -182,11 +182,23 @@ namespace Enemy
             animator.ResetTrigger("Attack");
             animator.ResetTrigger("Damage");
 
+            // Disable CharacterController immediately
+            if (controller != null)
+                controller.enabled = false;
+
+            // Disable all colliders immediately
+            Collider[] colliders = GetComponentsInChildren<Collider>();
+            foreach (Collider col in colliders)
+            {
+                col.enabled = false;
+            }
+
             animator.applyRootMotion = true;
             animator.SetTrigger("Death");
 
             enabled = false;
 
+            // Destroy after 7 seconds
             Destroy(gameObject, 7f);
         }
 
