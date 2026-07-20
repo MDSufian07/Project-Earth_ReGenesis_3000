@@ -47,8 +47,9 @@ public class ChargeGun : MonoBehaviour
         {
             if (GunCharge.Instance == null)
                 return;
-            
-            if (!GunCharge.Instance.HasEnoughCharge(minimumCharge))
+
+            // শুধু Minimum Charge আছে কিনা চেক করবে
+            if (GunCharge.Instance.CurrentCharge < minimumCharge)
             {
                 Debug.Log("Not enough Charge!");
                 return;
@@ -129,28 +130,33 @@ public class ChargeGun : MonoBehaviour
 
         holdTime = Mathf.Clamp(holdTime, minimumCharge, maximumCharge);
 
-        float chargeCost = holdTime;
-
         if (GunCharge.Instance == null)
             return;
 
-        if (!GunCharge.Instance.HasEnoughCharge(chargeCost))
+        float availableCharge = GunCharge.Instance.CurrentCharge;
+
+        // Minimum Charge না থাকলে Fire হবে না
+        if (availableCharge < minimumCharge)
         {
             Debug.Log("Not enough Charge!");
             return;
         }
 
-        GunCharge.Instance.Consume(chargeCost);
+        // যত Charge আছে ততটাই Consume করবে
+        float chargeCost = Mathf.Min(holdTime, availableCharge);
 
+        // Damage Scale করবে ব্যবহৃত Charge অনুযায়ী
         float t = Mathf.InverseLerp(
             minimumCharge,
             maximumCharge,
-            holdTime);
+            chargeCost);
 
         float damage = Mathf.Lerp(
             minimumDamage,
             maximumDamage,
             t);
+
+        GunCharge.Instance.Consume(chargeCost);
 
         Bullet bullet = Instantiate(
             bulletPrefab,
@@ -165,7 +171,11 @@ public class ChargeGun : MonoBehaviour
         }
 
 #if UNITY_EDITOR
-        Debug.Log($"Hold Time: {holdTime:F2}s | Damage: {damage:F0} | Charge Used: {chargeCost:F2} | Remaining Charge: {GunCharge.Instance.CurrentCharge:F2}");
+        Debug.Log(
+            $"Hold Time: {holdTime:F2}s | " +
+            $"Damage: {damage:F0} | " +
+            $"Charge Used: {chargeCost:F2} | " +
+            $"Remaining Charge: {GunCharge.Instance.CurrentCharge:F2}");
 #endif
     }
 }

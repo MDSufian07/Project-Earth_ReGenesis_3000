@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 505a3a9719195da45a8ec54da0839a99
+AudioImporter:
+  externalObjects: {}
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  preloadAudioData: 1
+  loadInBackground: 0
+  ambisonic: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 345834
+  packageName: Viking Instrumental Background Free Music
+  packageVersion: 1.0
+  assetPath: Assets/Scenes/Echoes of Quiet Shields - Nordic Meditation Music.wav
+  uploadId: 823158

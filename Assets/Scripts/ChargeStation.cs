@@ -4,26 +4,36 @@ using Weapons;
 public class ChargeStation : MonoBehaviour
 {
     [Header("Recharge")]
-    [SerializeField] private float rechargeRate = 1f;
+    [SerializeField] private float rechargeRate = 5f;
 
     [Header("References")]
-    [SerializeField] private Collider rechargeTrigger;
-    [SerializeField] private Collider uiTrigger;
+    [SerializeField] private BoxCollider rechargeTrigger;
+    [SerializeField] private BoxCollider uiTrigger;
 
     [Header("UI")]
     [SerializeField] private GameObject pressEUI;
 
-    private bool inUIRange;
-    private bool inRechargeRange;
+    private Transform player;
 
     private void Start()
     {
         if (pressEUI != null)
             pressEUI.SetActive(false);
+
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+
+        if (p != null)
+            player = p.transform;
     }
 
     private void Update()
     {
+        if (player == null)
+            return;
+
+        bool inUIRange = IsInside(uiTrigger);
+        bool inRechargeRange = IsInside(rechargeTrigger);
+
         if (pressEUI != null)
             pressEUI.SetActive(inUIRange);
 
@@ -33,30 +43,26 @@ public class ChargeStation : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private bool IsInside(BoxCollider box)
     {
-        if (!other.CompareTag("Player"))
-            return;
+        if (box == null)
+            return false;
 
-        if (other == null)
-            return;
+        Vector3 worldCenter = box.transform.TransformPoint(box.center);
+        Vector3 worldHalfSize = Vector3.Scale(box.size * 0.5f, box.transform.lossyScale);
 
-        if (other.bounds.Intersects(uiTrigger.bounds))
-            inUIRange = true;
+        Collider[] hits = Physics.OverlapBox(
+            worldCenter,
+            worldHalfSize,
+            box.transform.rotation
+        );
 
-        if (other.bounds.Intersects(rechargeTrigger.bounds))
-            inRechargeRange = true;
-    }
+        foreach (Collider hit in hits)
+        {
+            if (hit.CompareTag("Player"))
+                return true;
+        }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (!other.CompareTag("Player"))
-            return;
-
-        if (other.bounds.Intersects(uiTrigger.bounds))
-            inUIRange = false;
-
-        if (other.bounds.Intersects(rechargeTrigger.bounds))
-            inRechargeRange = false;
+        return false;
     }
 }

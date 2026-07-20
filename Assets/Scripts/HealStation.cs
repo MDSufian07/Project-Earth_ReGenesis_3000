@@ -6,15 +6,13 @@ public class HealStation : MonoBehaviour
     [SerializeField] private float healRate = 20f;
 
     [Header("References")]
-    [SerializeField] private Collider healTrigger;
-    [SerializeField] private Collider uiTrigger;
+    [SerializeField] private BoxCollider healTrigger;
+    [SerializeField] private BoxCollider uiTrigger;
 
     [Header("UI")]
     [SerializeField] private GameObject pressEUI;
 
-    private bool inUIRange;
-    private bool inHealRange;
-
+    private Transform player;
     private Health playerHealth;
 
     private void Start()
@@ -22,56 +20,54 @@ public class HealStation : MonoBehaviour
         if (pressEUI != null)
             pressEUI.SetActive(false);
 
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
 
-        if (player != null)
-            playerHealth = player.GetComponent<Health>();
+        if (p != null)
+        {
+            player = p.transform;
+            playerHealth = p.GetComponent<Health>();
+        }
     }
 
     private void Update()
     {
-        if (playerHealth == null)
+        if (player == null || playerHealth == null)
             return;
 
-        // Show UI only when player is in UI range and not full health
+        bool inUIRange = IsInside(uiTrigger);
+        bool inHealRange = IsInside(healTrigger);
+
         if (pressEUI != null)
-        {
             pressEUI.SetActive(inUIRange && !playerHealth.IsFullHealth());
-        }
 
-        if (!inHealRange)
-            return;
-
-        if (playerHealth.IsFullHealth())
-            return;
-
-        if (Input.GetKey(KeyCode.E))
+        if (inHealRange &&
+            !playerHealth.IsFullHealth() &&
+            Input.GetKey(KeyCode.E))
         {
             playerHealth.Heal(healRate * Time.deltaTime);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private bool IsInside(BoxCollider box)
     {
-        if (!other.CompareTag("Player"))
-            return;
+        if (box == null)
+            return false;
 
-        if (other.bounds.Intersects(uiTrigger.bounds))
-            inUIRange = true;
+        Vector3 worldCenter = box.transform.TransformPoint(box.center);
+        Vector3 worldHalfSize = Vector3.Scale(box.size * 0.5f, box.transform.lossyScale);
 
-        if (other.bounds.Intersects(healTrigger.bounds))
-            inHealRange = true;
-    }
+        Collider[] hits = Physics.OverlapBox(
+            worldCenter,
+            worldHalfSize,
+            box.transform.rotation
+        );
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (!other.CompareTag("Player"))
-            return;
+        foreach (Collider hit in hits)
+        {
+            if (hit.CompareTag("Player"))
+                return true;
+        }
 
-        if (other.bounds.Intersects(uiTrigger.bounds))
-            inUIRange = false;
-
-        if (other.bounds.Intersects(healTrigger.bounds))
-            inHealRange = false;
+        return false;
     }
 }
